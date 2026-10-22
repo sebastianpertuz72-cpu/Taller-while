@@ -10,11 +10,11 @@ El promedio es la suma de las notas aceptadas dividida entre su cantidad.
 suma = 0
 cantidad = 0
 while True:
-    num = int(input("Ingresa las notas"))
-    while num < 0 or num > 100:
-            print("Nota no valida")
+    while True:
+        num = int(input("Ingresa las notas"))
+        if 0 <= num <= 100 or num == -99:
             break
-    
+        print("Nota invalida, digite nuevamente.....")
     if num == -99:
         break
     cantidad += 1
